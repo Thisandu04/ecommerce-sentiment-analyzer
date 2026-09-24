@@ -48,6 +48,7 @@ ecommerce-sentiment-analyzer/
 ├── data/                    # raw dataset (gitignored)
 ├── notebooks/
 │   └── 01_exploration.ipynb # Week 1: loading, EDA, train/test split
+    └── 02_exploration.ipynb # Week 1: loading, EDA, train/test split
 ├── requirements.txt
 ├── .gitignore
 └── README.md
