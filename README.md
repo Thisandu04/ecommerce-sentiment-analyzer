@@ -72,6 +72,10 @@ ecommerce-sentiment-analyzer/
 - Duplicate reviews dropped: `<0>`
 - Review length: min `<1>`, max `<1858>`, average `<30.24>` words
 
+<img width="1459" height="675" alt="Screenshot 2026-09-27 223913" src="https://github.com/user-attachments/assets/57e57a01-876a-4311-8fe5-7c3d25942205" />
+
+<img width="475" height="112" alt="Screenshot 2026-09-27 223931" src="https://github.com/user-attachments/assets/a4ab8bfd-977b-4fd1-b77d-49b5844a23ee" />
+
 
 ## Week 2 — Text Preprocessing & Baseline Model
 
@@ -82,6 +86,8 @@ ecommerce-sentiment-analyzer/
 
 **Baseline result:**
 - Accuracy: `<0.841>`
+
+<img width="920" height="93" alt="Screenshot 2026-09-27 223952" src="https://github.com/user-attachments/assets/bec775a5-38a9-4f33-945a-75afcd7a0e7b" />
 
 
 ## Progress
