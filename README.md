@@ -72,9 +72,21 @@ ecommerce-sentiment-analyzer/
 - Duplicate reviews dropped: `<0>`
 - Review length: min `<1>`, max `<1858>`, average `<30.24>` words
 
+
+## Week 2 — Text Preprocessing & Baseline Model
+
+**What I did:**
+- Cleaned review text (lowercased, stripped punctuation, removed stopwords while preserving negation words).
+- Converted text to TF-IDF features (unigrams + bigrams, fit on training data only).
+- Trained a Logistic Regression baseline with `class_weight='balanced'` to account for class imbalance.
+
+**Baseline result:**
+- Accuracy: `<0.841>`
+
+
 ## Progress
 
 - [x] Week 1 — Environment, dataset, EDA
-- [ ] Week 2 — Text preprocessing & baseline model (TF-IDF + Logistic Regression)
+- [x] Week 2 — Text preprocessing & baseline model (TF-IDF + Logistic Regression)
 - [ ] Week 3 — Evaluation & improvement
 - [ ] Week 4 — Streamlit app & project completion
