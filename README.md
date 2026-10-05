@@ -110,6 +110,11 @@ Per-class F1 (Negative / Neutral / Positive):
 - Logistic Regression: 0.34 / 0.22 / 0.92
 - Linear SVM: 0.40 / 0.23 / 0.96
 
+<img width="655" height="439" alt="Screenshot 2026-10-05 174732" src="https://github.com/user-attachments/assets/d5c95dd9-9fa9-48d6-94b9-cd782777f903" />
+
+
+<img width="456" height="357" alt="Screenshot 2026-10-05 174748" src="https://github.com/user-attachments/assets/308655c4-c728-40bb-92e4-aaa5dede5067" />
+
 **Model comparison and decision:**
 
 Logistic Regression scored a macro-F1 of 0.49, and Linear SVM scored 0.53 — a 4-point gap. The per-class breakdown explains why: with `class_weight='balanced'`, Logistic Regression aggressively over-predicts the minority classes (Negative recall 0.54, Neutral recall 0.42), but at a steep precision cost — only 25% of its "Negative" predictions and 15% of its "Neutral" predictions are actually correct. Linear SVM trades some of that recall for much higher precision (0.39, 0.21) and a large gain on the dominant Positive class (F1 0.96 vs 0.92), driving its overall accuracy to 91% vs 84%.
