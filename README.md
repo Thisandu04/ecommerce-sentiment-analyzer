@@ -164,6 +164,8 @@ Linear SVM, calibrated with `CalibratedClassifierCV` for probability output, cho
 - Non-English input: `<"low-confidence, unreliable prediction">`
 - Mixed-sentiment input: `<"tends to lean toward whichever sentiment has stronger wording">`
 
+<img width="1862" height="1028" alt="Screenshot 2026-10-07 145606" src="https://github.com/user-attachments/assets/7dc47139-72ba-47b6-b6ee-280bae1d52b7" />
+
 
 ## Progress
 
