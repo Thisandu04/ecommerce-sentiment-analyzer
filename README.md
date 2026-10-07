@@ -130,9 +130,44 @@ Carrying forward **Linear SVM**. Its macro- and weighted-F1 are both meaningfull
 - **Short reviews:** Very short text gives TF-IDF little signal to work with.
 
 
+## Usage
+
+```bash
+streamlit run app.py
+```
+
+Paste a product review into the text box and click "Predict Sentiment" to see the predicted sentiment and confidence score.
+
+## Final Model
+
+Linear SVM, calibrated with `CalibratedClassifierCV` for probability output, chosen over the Logistic Regression baseline — see the Week 3 section above for the full comparison and reasoning.
+
+## Week 4 — Streamlit App & Project Completion
+
+**What I did:**
+- Moved text-cleaning logic into a shared `src/preprocessing.py` module, used by both the training notebook and the app, to guarantee identical preprocessing at train and inference time.
+- Retrained the final model (calibrated Linear SVM) in `notebooks/05_final_model.ipynb` and saved the vectorizer + classifier with `joblib`.
+- Built a Streamlit app (`app.py`) with a text input, prediction button, predicted sentiment, and confidence score display.
+- Tested the app deliberately with normal, short, long, empty, symbol-only, and non-English inputs.
+- Cleaned the repository (cleared notebook outputs, verified `.gitignore`, updated `requirements.txt`).
+- Finalized this README with setup instructions, results, and limitations.
+
+**Final model performance:**
+- Macro-F1: `<0.424>`
+
+**Observations from testing:**
+- Normal input: `<"works as expected">`
+- Short input (1-2 words): `<"still predicts, but confidence is lower">`
+- Long input: `<"no issues, handled fine">`
+- Empty input: `<"warning message shown, no crash">`
+- Symbols/numbers only: `<"predicts Positive by default after cleaning strips everything — worth noting as a limitation">`
+- Non-English input: `<"low-confidence, unreliable prediction">`
+- Mixed-sentiment input: `<"tends to lean toward whichever sentiment has stronger wording">`
+
+
 ## Progress
 
 - [x] Week 1 — Environment, dataset, EDA
 - [x] Week 2 — Text preprocessing & baseline model (TF-IDF + Logistic Regression)
 - [x] Week 3 — Evaluation & improvement
-- [ ] Week 4 — Streamlit app & project completion
+- [x] Week 4 — Streamlit app & project completion
