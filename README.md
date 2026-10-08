@@ -166,6 +166,10 @@ Linear SVM, calibrated with `CalibratedClassifierCV` for probability output, cho
 
 <img width="1862" height="1028" alt="Screenshot 2026-10-07 145606" src="https://github.com/user-attachments/assets/7dc47139-72ba-47b6-b6ee-280bae1d52b7" />
 
+<img width="1907" height="969" alt="Screenshot 2026-10-08 110726" src="https://github.com/user-attachments/assets/0f08a03d-680f-42c9-89e0-b22755b6c754" />
+
+<img width="1919" height="1019" alt="Screenshot 2026-10-08 111205" src="https://github.com/user-attachments/assets/666b0421-06bb-43b2-b6db-a98899e343e9" />
+
 
 ## Progress
 
