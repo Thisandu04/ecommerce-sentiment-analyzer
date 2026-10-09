@@ -2,9 +2,53 @@
 
 Web application that takes e-commerce product reviews and predicts whether the sentiment is Positive, Neutral, or Negative.
 
+
+<img width="1862" height="1028" alt="Screenshot 2026-10-07 145606" src="https://github.com/user-attachments/assets/7dc47139-72ba-47b6-b6ee-280bae1d52b7" />
+
+<img width="1907" height="969" alt="Screenshot 2026-10-08 110726" src="https://github.com/user-attachments/assets/0f08a03d-680f-42c9-89e0-b22755b6c754" />
+
+<img width="1919" height="1019" alt="Screenshot 2026-10-08 111205" src="https://github.com/user-attachments/assets/666b0421-06bb-43b2-b6db-a98899e343e9" />
+
+
 ## Project Goal
 
 Build a machine learning pipeline that classifies customer product reviews by sentiment, and expose it through a simple web interface (Streamlit) where a user can paste a review and get an instant prediction.
+
+
+## Project Structure
+
+```
+ecommerce-sentiment-analyzer/
+├── app.py                          # Streamlit web app
+├── data/                           # raw dataset (gitignored, download from Kaggle)
+├── models/
+│   ├── vectorizer.pkl              # trained TF-IDF vectorizer
+│   └── classifier.pkl              # trained calibrated Linear SVM
+├── notebooks/
+│   ├── 01_exploration.ipynb        # Week 1: loading data, EDA, class balance
+│   ├── 02_exploration.ipynb        # Week 1: further exploration, train/test split
+│   ├── 03_baseline_model.ipynb     # Week 2: preprocessing, TF-IDF, Logistic Regression
+│   ├── 04_evaluation.ipynb         # Week 3: metrics, confusion matrix, SVM comparison
+│   └── 05_final_model.ipynb        # Week 4: final model training and saving
+├── screenshots/
+│   └── app.png                     # screenshot of the running app
+├── src/
+│   ├── __init__.py                 # makes src a Python package (empty)
+│   └── preprocessing.py            # shared clean_text function
+├── requirements.txt                # minimal dependencies for the app/deployment
+├── requirements-dev.txt            # full dependencies for running the notebooks
+├── .gitignore
+└── README.md
+```
+
+| Notebook | Purpose |
+|----------|---------|
+| `01_exploration.ipynb` | Load the dataset, inspect columns, check class balance |
+| `02_exploration.ipynb` | Missing values, duplicates, review lengths, train/test split |
+| `03_baseline_model.ipynb` | Text cleaning, TF-IDF, Logistic Regression baseline |
+| `04_evaluation.ipynb` | Precision/recall/F1, confusion matrix, error analysis, SVM comparison |
+| `05_final_model.ipynb` | Train the calibrated Linear SVM and save the `.pkl` files |
+
 
 ## Dataset
 
@@ -41,18 +85,7 @@ pip install -r requirements.txt
 
 Download the dataset from Kaggle (link above) and place the CSV in a `data/` folder (not tracked by git).
 
-## Project Structure
 
-```
-ecommerce-sentiment-analyzer/
-├── data/                    # raw dataset (gitignored)
-├── notebooks/
-│   └── 01_exploration.ipynb # Week 1: loading, EDA, train/test split
-    └── 02_exploration.ipynb # Week 1: loading, EDA, train/test split
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
 
 
 ## Week 1 — Environment, Dataset & EDA
@@ -163,12 +196,6 @@ Linear SVM, calibrated with `CalibratedClassifierCV` for probability output, cho
 - Symbols/numbers only: `<"predicts Positive by default after cleaning strips everything — worth noting as a limitation">`
 - Non-English input: `<"low-confidence, unreliable prediction">`
 - Mixed-sentiment input: `<"tends to lean toward whichever sentiment has stronger wording">`
-
-<img width="1862" height="1028" alt="Screenshot 2026-10-07 145606" src="https://github.com/user-attachments/assets/7dc47139-72ba-47b6-b6ee-280bae1d52b7" />
-
-<img width="1907" height="969" alt="Screenshot 2026-10-08 110726" src="https://github.com/user-attachments/assets/0f08a03d-680f-42c9-89e0-b22755b6c754" />
-
-<img width="1919" height="1019" alt="Screenshot 2026-10-08 111205" src="https://github.com/user-attachments/assets/666b0421-06bb-43b2-b6db-a98899e343e9" />
 
 
 ## Progress
