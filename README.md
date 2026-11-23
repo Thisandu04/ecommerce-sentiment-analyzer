@@ -204,3 +204,6 @@ Linear SVM, calibrated with `CalibratedClassifierCV` for probability output, cho
 - [x] Week 2 — Text preprocessing & baseline model (TF-IDF + Logistic Regression)
 - [x] Week 3 — Evaluation & improvement
 - [x] Week 4 — Streamlit app & project completion
+
+## Read the Medium blog article here:
+<https://medium.com/@thisandu2004sethmitha/why-accuracy-lied-to-me-building-my-first-end-to-end-sentiment-analyzer-269cb48ba3e2?sharedUserId=thisandu2004sethmitha>
